@@ -77,6 +77,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'stock',
+        'USER': ' root@localhost',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306', # Default MySQL port
+
     }
 }
 

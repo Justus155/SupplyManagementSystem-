@@ -2,9 +2,6 @@ class Clinic(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, limit_choices_to={'role': 'CLINIC'})  
     license_key = models.CharField(max_length=50, unique=True)  
     location = models.CharField(max_length=100)  # Or use GeoDjango PointField for GPS  
-    gps_lat = models.DecimalField(max_digits=9, decimal_places=6, null=True)  
-    gps_lon = models.DecimalField(max_digits=9, decimal_places=6, null=True)  
-
     def get_current_stock(self):  
         return self.inventory_set.filter(quantity__gt=0)  
 
