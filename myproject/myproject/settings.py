@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', # Django REST Framework for API development
+    'dbconnect',
+
 ]
 
 MIDDLEWARE = [
@@ -78,12 +80,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'stock',
-        'USER': ' root@localhost',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306', # Default MySQL port
-
     }
 }
 
